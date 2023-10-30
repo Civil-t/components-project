@@ -1,0 +1,28 @@
+import "./App.css";
+import ListGroup from "./components/ListGroup";
+
+function App() {
+  let items = [
+    "Personal Details and Photo",
+    "Education Background",
+    "Special Skills",
+    "Extra Curriculum Activities",
+    "Hobbies and Interests",
+  ];
+
+  const handleSelectItem = (item: number) => {
+    console.log(item);
+  };
+
+  return (
+    <div>
+      <ListGroup
+        items={items}
+        heading="My CV"
+        onSelectItem={handleSelectItem}
+      />
+    </div>
+  );
+}
+
+export default App;
